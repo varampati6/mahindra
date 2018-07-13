@@ -1,3 +1,4 @@
-FROM tomcat
-ADD ./target/*.war /opt/tomcat/webapps/
-CMD ["catalina.sh", "run"]
+FROM java:8
+EXPOSE 8080
+ADD ./target/mahindra.war mahindra.war
+ENTRYPOINT ["java","-jar","mahindra.war"]
