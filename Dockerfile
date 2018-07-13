@@ -1,23 +1,16 @@
 FROM java:8
-FROM nginx
 
-ENV PORT 9080	
+ENV PORT 8080
 
-EXPOSE 9080
-
-#RUN chgrp -R 0 /opt/tomcat/webapps
-#RUN chmod -R g+rwX /opt/tomcat/webapps
+EXPOSE 8080
 
 RUN mkdir /app
 
-# COPY ./target/tech-0.0.1-SNAPSHOT.jar /apps/tech-0.0.1-SNAPSHOT.jar
-COPY ./target/mahindra.jar /opt/tomcat/webapps/techmahindra.jar
+COPY ./target/mahindra.jar /app/mahindra.jar
 
-#WORKDIR /apps
-WORKDIR /opt/tomcat/webapps
+WORKDIR /app
 
-#RUN chmod +x /apps/tech-0.0.1-SNAPSHOT.jar
-RUN chmod +x /opt/tomcat/webapps/techmahindra.jar
+RUN chmod +x /app/mahindra.jar
 
-#ENTRYPOINT ["java","-jar","/apps/tech-0.0.1-SNAPSHOT.jar"]
-ENTRYPOINT ["java","-jar","/opt/tomcat/webapps/techmahindra.jar"]
+ENTRYPOINT ["java","-jar","/app/mahindra.jar"]
+
