@@ -1,1 +1,0 @@
-Main-Class: com.tech.mahindra.MainClass
