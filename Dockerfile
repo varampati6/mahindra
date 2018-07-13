@@ -11,7 +11,7 @@ EXPOSE 9080
 RUN mkdir /app
 
 # COPY ./target/tech-0.0.1-SNAPSHOT.jar /apps/tech-0.0.1-SNAPSHOT.jar
-COPY ./target/mahindra.war /opt/tomcat/webapps/techmahindra.jar
+COPY ./target/mahindra.jar /opt/tomcat/webapps/techmahindra.jar
 
 #WORKDIR /apps
 WORKDIR /opt/tomcat/webapps

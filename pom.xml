@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>tech</groupId>
   <artifactId>mahindra</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>mahindra Maven Webapp</name>
   <url>http://maven.apache.org</url>
