@@ -6,7 +6,7 @@ EXPOSE 8080
 
 RUN mkdir /app
 
-COPY ./target/mahindra.jar /app/mahindra.jar
+COPY /root/.jenkins/workspace/TechMahindra/target/mahindra.jar /app/mahindra.jar
 
 WORKDIR /app
 
